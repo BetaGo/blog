@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .outer {
+      display: inline-block;
+      height: 200px;
+      width: 40%;
+    }
+
+    .height-100 {
+      position: absolute;
+      height: 100%;
+      width: 200px;
+      background: #ccc;
+    }
+
+    .height-inherit {
+      position: absolute;
+      height: inherit;
+      width: 200px;
+      background: #c16789;
+    }
+    .abs-box {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #1069cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="height-100">
+      <div class="abs-box"></div>
+    </div>
+  </div>
+  <div class="outer">
+      <div class="height-inherit"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+webpackJsonp([89590690371676],{329:function(t,e){t.exports={data:{markdownRemark:{id:"/home/betago/projects/blog/src/pages/hello/index.md absPath of file >>> MarkdownRemark",html:"<p>hello world</p>",frontmatter:{title:"hello",date:"November 07, 2017"}}},pathContext:{slug:"/hello/",previous:{fields:{slug:"/world/"},frontmatter:{title:"world"}},next:{fields:{slug:"/javascript/"},frontmatter:{title:"javascript"}}}}}});
+//# sourceMappingURL=path---hello-c93e1f36b09bc8a67df5.js.map

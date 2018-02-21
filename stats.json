@@ -1,24 +1,32 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-9ec9a415d7c7d776d557.js",
-      "component---src-pages-index-js-9ec9a415d7c7d776d557.js.map"
+      "component---src-pages-index-js-52da04c1174f3d679800.js",
+      "component---src-pages-index-js-52da04c1174f3d679800.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
     ],
-    "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-47b43120304f30e08971.js",
-      "component---src-layouts-index-js-47b43120304f30e08971.js.map"
+    "path---hello": [
+      "path---hello-c93e1f36b09bc8a67df5.js",
+      "path---hello-c93e1f36b09bc8a67df5.js.map"
     ],
-    "path---page-2": [
-      "path---page-2-a0e39f21c11f6a62c5ab.js",
-      "path---page-2-a0e39f21c11f6a62c5ab.js.map"
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-0ab1361b72a84d159730.js",
+      "component---src-templates-blog-post-js-0ab1361b72a84d159730.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-2da03a537b371d05c74d.js",
+      "component---src-layouts-index-js-2da03a537b371d05c74d.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
       "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---javascript": [
+      "path---javascript-87d63f3136ebd0f198b5.js",
+      "path---javascript-87d63f3136ebd0f198b5.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -32,15 +40,15 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "component---src-pages-page-2-js": [
-      "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js",
-      "component---src-pages-page-2-js-075954cd9c4544c7dcd8.js.map"
-    ],
     "app": [
-      "app-aa5344bc72e668fed658.js",
+      "app-7aa53b496bb1a9cacde5.js",
       "build-js-styles.css",
-      "app-aa5344bc72e668fed658.js.map",
+      "app-7aa53b496bb1a9cacde5.js.map",
       "build-js-styles.css.map"
+    ],
+    "path---world": [
+      "path---world-674e9809624e92b95229.js",
+      "path---world-674e9809624e92b95229.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",

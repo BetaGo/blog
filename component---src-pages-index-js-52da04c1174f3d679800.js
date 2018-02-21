@@ -1,0 +1,2 @@
+webpackJsonp([35783957827783],{203:function(e,t,l){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var n=l(4),r=u(n),a=function(){return r.default.createElement("div",null,r.default.createElement("h1",null,"Hi people"),r.default.createElement("p",null,"Hero Never Die."))};t.default=a,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-index-js-52da04c1174f3d679800.js.map

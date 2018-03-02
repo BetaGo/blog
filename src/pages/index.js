@@ -30,7 +30,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "MM月DD日, YYYY年")
-            path
             title
           }
         }

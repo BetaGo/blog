@@ -1,0 +1,2 @@
+webpackJsonp([89590690371676],{330:function(t,l){t.exports={pathContext:{slug:"/hello/",previous:{fields:{slug:"/javascript/"},frontmatter:{title:"javascript",tags:null}},next:{fields:{slug:"/world/"},frontmatter:{title:"world",tags:null}}}}}});
+//# sourceMappingURL=path---hello-cbac164bc1211f9aea93.js.map

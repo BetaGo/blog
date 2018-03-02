@@ -1,0 +1,2 @@
+webpackJsonp([0xd853a5012c25],{333:function(e,t){e.exports={data:{markdownRemark:{id:"/home/betago/projects/blog/src/pages/world/index.md absPath of file >>> MarkdownRemark",html:"<p>world</p>",frontmatter:{title:"world",date:"November 16, 2017"}}},pathContext:{slug:"/world/",previous:{fields:{slug:"/hello/"},frontmatter:{title:"hello",tags:["娱乐","编程"]}},next:!1}}}});
+//# sourceMappingURL=path---world-120697aa951072cc042f.js.map

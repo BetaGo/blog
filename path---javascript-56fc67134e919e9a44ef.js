@@ -1,0 +1,2 @@
+webpackJsonp([0x8926a53edeeb],{332:function(e,t){e.exports={pathContext:{slug:"/javascript/",previous:!1,next:{fields:{slug:"/hello/"},frontmatter:{title:"hello",tags:["娱乐","编程"]}}}}}});
+//# sourceMappingURL=path---javascript-56fc67134e919e9a44ef.js.map

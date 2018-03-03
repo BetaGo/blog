@@ -2,15 +2,19 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
 
-
 const Marked = styled.div`
   font-size: 16;
   color: #eee;
   margin-top: 16px;
   margin-bottom: 16px;
   padding: 10px 20px;
-  background-color: #313131;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.2);
   
+  & pre {
+    background: rgba(27,28,22,0.2)
+  }
+
   & h1 {
     color: #EC625F;
     margin: 0.7em 0;

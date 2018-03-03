@@ -49,6 +49,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           createPage({
             path: post.node.fields.slug,
             component: blogPost,
+            layout: 'BlogPost',
             context: {
               slug: post.node.fields.slug,
               previous,

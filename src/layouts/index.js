@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Header from '../components/Header'
-import './index.css'
+// import './index.css'
 
 require('prismjs/themes/prism-okaidia.css')
 

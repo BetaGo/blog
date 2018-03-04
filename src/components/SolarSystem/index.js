@@ -265,7 +265,7 @@ const AsteriidsBelt = styled.div`
         margin-left: ${-parseInt(asteroidsBeltPl) / 2}px;
         background: transparent;
         border-radius:140px !important;
-        box-shadow: ${createStars(390, 290, -290/2, -104)};
+        box-shadow: ${createStars(390, 290, -290/2, -104)} !important;
     }
 `
 

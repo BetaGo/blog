@@ -9,10 +9,10 @@ const Marked = styled.div`
   margin-bottom: 16px;
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.3);
   
   & pre {
-    background: rgba(27,28,22,0.2)
+    background: rgba(27,28,22,0.3)
   }
 
   & h1 {
@@ -109,7 +109,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MM月 DD日, YYYY年")
       }
     }
   }

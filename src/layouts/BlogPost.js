@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled, { injectGlobal } from 'styled-components'
+import Link from 'gatsby-link';
 
 import SolarSystem from '../components/SolarSystem';
 
@@ -21,10 +22,18 @@ injectGlobal`
 `
 
 const Header = styled.div`
+    color: #ddd;
+    background: rgba(0, 0, 0, 0.5);
     margin: auto;
     font-size: 3em;
     line-height: 3em;
+    padding: 0 3em;
+    & a {
+        text-decoration: none;
+        color: #ddd;
+    }
 `
+
 
 const Content = styled.div`
 `
@@ -44,7 +53,9 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <SolarSystem />
-    <Header>星空</Header>
+    <Header>
+        <Link to="/" >Valar Morghulis</Link>
+    </Header>
     <Content>
         <Container>
             {children()}

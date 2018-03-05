@@ -1,17 +1,25 @@
 import React from 'react';
-import PostLink from '../components/PostLink';
+import styled from 'styled-components';
+
+import PostCard from '../components/PostCard';
+
+
+const Root = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
 
 const IndexPage = ({data: { allMarkdownRemark: { edges }}}) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <PostCard key={edge.node.id} post={edge.node} />)
 
   console.log(Posts)
   return (
     <div>
       <h1>Hi people</h1>
       <p>Hero Never Die. ?</p>
-      <div>{Posts}</div>
+      <Root>{Posts}</Root>
     </div>
   )
 }

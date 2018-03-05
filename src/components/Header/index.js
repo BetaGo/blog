@@ -1,20 +1,21 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+
+const Root = styled.div`
+  background: rgba(20,15,36,0.5);
+  margin-bottom: 30px;
+`
+
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 30px 20px;
+`
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
+  <Root>
+    <Content>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -26,8 +27,8 @@ const Header = () => (
           Beta Go
         </Link>
       </h1>
-    </div>
-  </div>
+    </Content>
+  </Root>
 )
 
 export default Header

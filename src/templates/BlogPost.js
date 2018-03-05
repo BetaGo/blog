@@ -35,11 +35,10 @@ const Marked = styled.div`
     line-height: 1.6;
   }
   & h1, & h2, & h3, & h4 {
-    & .anchor-link-style {
+    & .anchor {
       opacity: 0;
-      display: none;
     }
-    &:hover .anchor-link-style {
+    &:hover .anchor {
       display: inline-block;
       opacity: 1;
       padding: 0 8px;

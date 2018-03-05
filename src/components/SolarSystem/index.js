@@ -59,7 +59,7 @@ const Space = styled.div`
         width: 2px;
         top: -2px;
         background: #fff;
-        box-shadow: ${createStars(500, window.innerWidth)};
+        box-shadow: ${createStars(500, 1920)};
         border-radius: 100px;
     }
     position: fixed;

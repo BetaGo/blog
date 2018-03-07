@@ -2,11 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 import PostCard from '../components/PostCard';
-
+import SolarSystem from '../components/SolarSystem';
 
 const Root = styled.div`
   display: flex;
   flex-wrap: wrap;
+`
+const Quote = styled.div`
+  width: 800px;
+  margin: 30px auto;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center
+  color: #aaa;
+  & div {
+    font-weight: bold;
+  }
 `
 
 const IndexPage = ({data: { allMarkdownRemark: { edges }}}) => {
@@ -17,8 +28,11 @@ const IndexPage = ({data: { allMarkdownRemark: { edges }}}) => {
   console.log(Posts)
   return (
     <div>
-      <h1>Hi people</h1>
-      <p>Hero Never Die. ?</p>
+      <Quote>
+        “You smiled and talked to me of nothing and I felt that for this I had been waiting long.”
+        <div>― Rabindranath Tagore</div>
+      </Quote>
+      <SolarSystem />
       <Root>{Posts}</Root>
     </div>
   )

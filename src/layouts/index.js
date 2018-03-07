@@ -1,12 +1,25 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
+import styled, { injectGlobal } from 'styled-components'
 
 import Header from '../components/Header'
 // import './index.css'
 
  // require('prismjs/themes/prism-okaidia.css')
 
+ injectGlobal`
+ html, body {
+     height:100%;
+     width:100%;
+ }
+ body {
+     -webkit-font-smoothing: antialiased;
+     color:#fff;
+     background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
+     background-attachment:fixed;
+     margin: 0;
+ }
+`
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet

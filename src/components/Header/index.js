@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Root = styled.div`
-  background: rgba(20,15,36,0.5);
+  background: rgba(0,0,0,0.5);
   margin-bottom: 30px;
 `
 

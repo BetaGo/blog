@@ -7,9 +7,10 @@ const Root = styled.div`
     color: #ddd;
     width: 320px;
     height: 160px;
-    background: ${props =>  props.hasCover ? '#313131' : 'rgba(0,0,0,0.01)'};
+    background: ${props =>  props.hasCover ? '#313131' : 'rgba(0,0,0,0.1)'};
+    background-clip: padding-box;
     text-align: left;
-    border: 0.5px solid rgba(0, 0,0, 0.2);
+    border: 2px solid rgba(0,0,0,0);
     box-sizing: border-box;
 `
 

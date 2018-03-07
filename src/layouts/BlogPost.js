@@ -3,8 +3,6 @@ import Helmet from 'react-helmet'
 import styled, { injectGlobal } from 'styled-components'
 import Link from 'gatsby-link';
 
-import SolarSystem from '../components/SolarSystem';
-
 require('prismjs/themes/prism-okaidia.css')
 
 injectGlobal`
@@ -52,7 +50,6 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'blog, front end, read' },
       ]}
     />
-    <SolarSystem />
     <Header>
         <Link to="/" >Valar Morghulis</Link>
     </Header>

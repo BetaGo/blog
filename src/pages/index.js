@@ -31,18 +31,9 @@ const NavLink = props => {
 
 const IndexPage = ( props ) => {
   let { data, pathContext } = props;
-  const { group, index, first, last, pageCount } = pathContext;
-  const previousUrl = index - 1 == 1 ? '' : (index - 1).toString();
-  const nextUrl = (index + 1).toString();
-  console.log(`props: `, props)
-  console.log(`data: `, data)
-  console.log(`pathContext: `, pathContext)
-  console.log(data);
-  const Posts = group
+  const Posts = data.allMarkdownRemark.edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostCard key={edge.node.id} post={edge.node} />)
-  console.log('!!!!')
-  console.log(Posts)
   return (
     <div>
       <Quote>
@@ -51,8 +42,6 @@ const IndexPage = ( props ) => {
       </Quote>
       <SolarSystem />
       <Root>{Posts}</Root>
-      <div><NavLink test={first} url={previousUrl} text="go to prev" /></div>
-      <div><NavLink test={last} url={nextUrl} text="go to next" /></div>
     </div>
   )
 }
@@ -66,13 +55,14 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 140)
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MM月DD日, YYYY年")
             title
+            cover
           }
         }
       }

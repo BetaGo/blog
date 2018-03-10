@@ -8,7 +8,6 @@
 
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const pagination = require('gatsby-paginate')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
@@ -30,6 +29,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     title
                     tags
                     date
+                    cover
                   }
                 }
               }
@@ -45,12 +45,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         // console.log(result);
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges;
-        pagination({
-          edges: posts,
-          createPage: createPage,
-          pageTemplate: 'src/templates/index.js',
-          pageLength: 3
-        })
         posts.map((post, index) => {
           const previous = index === posts.length - 1 ? false : posts[index + 1].node;
           const next = index === 0 ? false : posts[index - 1].node;

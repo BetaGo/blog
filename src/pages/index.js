@@ -4,11 +4,8 @@ import Link from 'gatsby-link';
 
 import PostCard from '../components/PostCard';
 import SolarSystem from '../components/SolarSystem';
+import PageCard from '../components/PageCard';
 
-const Root = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
 const Quote = styled.div`
   width: 800px;
   margin: 30px auto;
@@ -31,9 +28,9 @@ const NavLink = props => {
 
 const IndexPage = ( props ) => {
   let { data, pathContext } = props;
-  const Posts = data.allMarkdownRemark.edges
+  const allPosts = data.allMarkdownRemark.edges
     .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <PostCard key={edge.node.id} post={edge.node} />)
+
   return (
     <div>
       <Quote>
@@ -41,7 +38,7 @@ const IndexPage = ( props ) => {
         <div>― Rabindranath Tagore</div>
       </Quote>
       <SolarSystem />
-      <Root>{Posts}</Root>
+      <PageCard posts={allPosts} />
     </div>
   )
 }

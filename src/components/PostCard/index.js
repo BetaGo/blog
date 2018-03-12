@@ -36,27 +36,47 @@ const Content = styled.div`
 const Excerpt = styled.div`
     position: absolute;
     display: flex;
-    padding: 1em;
     top: 0;
     right:0;
     bottom: 0;
     left: 0;
     background: rgba(0,0,0,0);
-    transition: all ease 0.6s;
+    transition: all ease-in-out 0.5s;
     &:hover {
         background: rgba(0,0,0,1);
     }
 
     &:hover div {
+        opacity: 1;
         transform: scale(1);
         background: radial-gradient(ellipse at center, #1C2837 0%, #050608 100%);
     }
     & div {
+        box-sizing: border-box;
+        opacity: 0;
+        padding: 1em 2em;
         width: 100%;
         height: 100%;
         transform: scale(0);
         margin: auto;
-        transition: all ease-out .5s;
+        transition: all ease-in-out .5s;
+
+        h3 {
+            text-align: center;
+            line-height: 1;
+            font-size: 14px;
+        }
+
+        h4 {
+            text-align: right;
+            line-height: 1;
+            margin: 0;
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 13px;
+        }
     }
 `
 const Cover = styled.div`
@@ -73,7 +93,11 @@ const PostLink = ({post}) => (
             </Content>
             <Cover src={post.frontmatter.cover} />
             <Excerpt>
-                <div>{post.excerpt}</div>
+                <div>
+                    <h3>{post.frontmatter.title}</h3>
+                    <h4>{post.frontmatter.date}</h4>
+                    <p>{post.excerpt}</p>
+                </div>
             </Excerpt>
         </Root>
     </Link>

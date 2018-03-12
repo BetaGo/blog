@@ -1,0 +1,232 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/component---src-layouts-blog-post-js-9ed38c9334d9b4fbdfe5.js" as="script"/><link rel="preload" href="/component---src-templates-blog-post-js-299dd36a9663a387e47a.js" as="script"/><link rel="preload" href="/path---2018-03-04-new-start-3f37915b0c5ae9109027.js" as="script"/><link rel="preload" href="/app-10655e88f25da7ba67f9.js" as="script"/><link rel="preload" href="/commons-084505cd4fd6b32f6bf7.js" as="script"/><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><title data-react-helmet="true">Beta Go</title><meta data-react-helmet="true" name="description" content="blog"/><meta data-react-helmet="true" name="keywords" content="blog, front end, read"/><title data-react-helmet="true"></title><style id="gatsby-inlined-css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="-1188884503"><!-- react-empty: 2 --><div class="sc-bdVaJa wGvvL" data-reactid="3"><a href="/" data-reactid="4">Valar Morghulis</a></div><div class="sc-bwzfXH bFHdpU" data-reactid="5"><div class="sc-htpNat fHApZb" data-reactid="6"><div data-reactid="7"><h1 data-reactid="8">全新的开始</h1><h2 data-reactid="9">03月 04日, 2018年</h2><div class="sc-EHOje kvCsue" data-reactid="10"><h1 id="css-in-js"><a href="#css-in-js" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS in JS</h1>
+<p>Material-UI aims to provide strong foundations for building dynamic UIs.
+For the sake of simplicity, <strong>we expose the internal styling solution to users</strong>.
+You can use it, but you don't have to. This styling solution is <a href="/guides/interoperability">interoperable with</a> all the other major solutions.</p>
+<h2 id="material-uis-styling-solution"><a href="#material-uis-styling-solution" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Material-UI's styling solution</h2>
+<p>In previous versions, Material-UI has used LESS, then a custom inline-style solution to write the style of the
+components, but these approaches have proven to be limited. Most recently, we have <a href="https://github.com/oliviertassinari/a-journey-toward-better-style">moved toward</a>
+a <em>CSS-in-JS</em> solution. It <strong>unlocks many great features</strong> (theme nesting, dynamic styles, self-support, etc.).
+We think that it's the future:</p>
+<ul>
+<li><a href="https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660">A Unified Styling Language</a></li>
+<li><a href="https://medium.freecodecamp.com/css-in-javascript-the-future-of-component-based-styling-70b161a79a32">The future of component-based styling</a></li>
+</ul>
+<p>So, you may have noticed in the demos how this <em>CSS-in-JS</em> looks.
+We use the higher-order component created by <a href="#api"><code>withStyles</code></a>
+to inject an array of styles into the DOM as CSS, using JSS. Here's an example:</p>
+<p>{{"demo": "pages/customization/CssInJs.js"}}</p>
+<h2 id="jss"><a href="#jss" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSS</h2>
+<p>Material-UI's styling solution uses <a href="https://github.com/cssinjs/jss">JSS</a> at its core.
+It's a <a href="https://github.com/cssinjs/jss/blob/master/docs/performance.md">high performance</a> JS to CSS compiler which works at runtime and server-side.
+It is about 8 kB (minified and gzipped) and is extensible via a <a href="https://github.com/cssinjs/jss/blob/master/docs/plugins.md">plugins</a> API.</p>
+<p>If you end up using this styling solution in your codebase, you're going to need to <em>learn the API</em>.
+The best place to start is by looking at the features that each <a href="http://cssinjs.org/plugins">plugin</a> provides. Material-UI uses the <a href="http://cssinjs.org/jss-preset-default">jss-preset-default</a> module. You can always add new plugins if needed with the <a href="https://github.com/cssinjs/react-jss#custom-setup"><code>JssProvider</code></a> helper.</p>
+<p>If you wish to build your own instance of <code>jss</code> <strong>and</strong> support <em>rtl</em> make sure you also include the <a href="https://github.com/alitaheri/jss-rtl">jss-rtl</a> plugin.
+Check the jss-rtl <a href="https://github.com/alitaheri/jss-rtl#simple-usage">readme</a> to learn how.</p>
+<h2 id="sheets-registry"><a href="#sheets-registry" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sheets registry</h2>
+<p>When rendering on the server, you will need to get all rendered styles as a CSS string.
+The <code>SheetsRegistry</code> class allows you to manually aggregate and stringify them.
+Read more about <a href="/guides/server-rendering">Server Rendering</a>.</p>
+<p>{{"demo": "pages/customization/JssRegistry.js"}}</p>
+<h2 id="sheets-manager"><a href="#sheets-manager" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sheets manager</h2>
+<p>We use a <a href="https://en.wikipedia.org/wiki/Reference_counting">reference counting</a> algorithm in order to attach and detach the style sheets only once per (styles, theme) couple.
+This technique provides an important performance boost when re-rending instances of a component.</p>
+<p>When only rendering on the client, that's not something you need to be aware of. However, when rendering on the server you do. You can read more about <a href="/guides/server-rendering">Server Rendering</a>.</p>
+<h2 id="class-names"><a href="#class-names" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class names</h2>
+<p>You may have noticed that the class names generated by our styling solution are <strong>non-deterministic</strong>,
+so you can't rely on them to stay the same. The following CSS won't work:</p>
+<div class="gatsby-highlight">
+      <pre class="language-css"><code class="language-css"><span class="token selector">.MuiAppBar-root-12</span> <span class="token punctuation">{</span>
+  <span class="token property">opacity</span><span class="token punctuation">:</span> 0.6
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>Instead, you have to use the <code>classes</code> property of a component to override them.
+On the other hand, thanks to the non-deterministic nature of our class names, we
+can implement optimizations for development and production.
+They are easy to debug in development and as short as possible in production:</p>
+<ul>
+<li>development: <code>.MuiAppBar-root-12</code></li>
+<li>production: <code>.c12</code></li>
+</ul>
+<h2 id="css-injection-order"><a href="#css-injection-order" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS injection order</h2>
+<p>The CSS injected by Material-UI to style a component has the highest specificity possible as the <code>&#x3C;link /></code> is injected at the bottom of the <code>&#x3C;head /></code>.
+This way, we ensure the components always render correctly.</p>
+<p>You might, however, also want to override these styles, for example with styled-components.
+If you are experiencing a CSS injection order issue, JSS <a href="https://github.com/cssinjs/jss/blob/master/docs/setup.md#specify-dom-insertion-point">provides a mechanism</a> to handle this situation.
+By adjusting the placement of the <code>insertionPoint</code> comment within your HTML body you can <a href="http://cssinjs.org/js-api/#attach-style-sheets-in-a-specific-order">control the order</a> that the CSS rules are applied to your components.</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> insertion<span class="token operator">-</span>point<span class="token operator">-</span>jss <span class="token operator">--</span><span class="token operator">></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Material<span class="token operator">-</span>UI<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+</code></pre>
+      </div>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> JssProvider <span class="token keyword">from</span> <span class="token string">'react-jss/lib/JssProvider'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> create <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'jss'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> preset <span class="token keyword">from</span> <span class="token string">'jss-preset-default'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> createGenerateClassName <span class="token keyword">from</span> <span class="token string">'material-ui/styles/createGenerateClassName'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> jss <span class="token operator">=</span> <span class="token function">create</span><span class="token punctuation">(</span><span class="token function">preset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Custom Material-UI class name generator for better debug and performance.</span>
+jss<span class="token punctuation">.</span>options<span class="token punctuation">.</span>createGenerateClassName <span class="token operator">=</span> createGenerateClassName<span class="token punctuation">;</span>
+<span class="token comment">// We define a custom insertion point JSS will look for injecting the styles in the DOM.</span>
+jss<span class="token punctuation">.</span>options<span class="token punctuation">.</span>insertionPoint <span class="token operator">=</span> <span class="token string">'insertion-point-jss'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>JssProvider</span> <span class="token attr-name">jss</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>jss<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+      <span class="token operator">...</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>JssProvider</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<h2 id="jssprovider"><a href="#jssprovider" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JssProvider</h2>
+<p>react-jss exposes a <code>JssProvider</code> component to configure JSS for the underlying child components.
+There are different use cases:</p>
+<ul>
+<li><a href="/customization/css-in-js#sheets-registry">Providing a Sheets registry.</a></li>
+<li>Providing a JSS instance. You might want to support <a href="/guides/right-to-left">Right-to-left</a> or changing the <a href="/customization/css-in-js#css-injection-order">CSS injection order</a>.
+Read <a href="http://cssinjs.org/js-api">the JSS documentation</a> to learn more about the options available.
+Here is an example:</li>
+</ul>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> JssProvider <span class="token keyword">from</span> <span class="token string">'react-jss/lib/JssProvider'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> create <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'jss'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> preset <span class="token keyword">from</span> <span class="token string">'jss-preset-default'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> createGenerateClassName <span class="token keyword">from</span> <span class="token string">'material-ui/styles/createGenerateClassName'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> jss <span class="token operator">=</span> <span class="token function">create</span><span class="token punctuation">(</span><span class="token function">preset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Custom Material-UI class name generator for better debug and performance.</span>
+jss<span class="token punctuation">.</span>options<span class="token punctuation">.</span>createGenerateClassName <span class="token operator">=</span> createGenerateClassName<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>JssProvider</span> <span class="token attr-name">jss</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span>jss<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+      <span class="token operator">...</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>JssProvider</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<h2 id="plugins"><a href="#plugins" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plugins</h2>
+<p>JSS uses the concept of plugins to extend its core, allowing people to cherry-pick the features they need.
+You pay the performance overhead for only what's you are using.
+Given <code>withStyles</code> is our internal styling solution, all the plugins aren't available by default. We have added the following list:</p>
+<ul>
+<li><a href="http://cssinjs.org/jss-global">jss-global</a></li>
+<li><a href="http://cssinjs.org/jss-nested">jss-nested</a></li>
+<li><a href="http://cssinjs.org/jss-camel-case">jss-camel-case</a></li>
+<li><a href="http://cssinjs.org/jss-default-unit">jss-default-unit</a></li>
+<li><a href="http://cssinjs.org/jss-vendor-prefixer">jss-vendor-prefixer</a></li>
+<li><a href="http://cssinjs.org/jss-props-sort">jss-props-sort</a></li>
+</ul>
+<p>It's a subset of <a href="http://cssinjs.org/jss-preset-default">jss-preset-default</a>.
+Of course, you are free to add a new plugin. We have one example for the <a href="/guides/right-to-left#3-jss-rtl"><code>jss-rtl</code> plugin</a>.</p>
+<h2 id="api"><a href="#api" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API</h2>
+<h3 id="withstylesstyles-options--higher-order-component"><a href="#withstylesstyles-options--higher-order-component" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>withStyles(styles, [options]) => Higher-order Component</code></h3>
+<p>Link a style sheet with a component.
+It does not modify the component passed to it; instead, it returns a new component, with a <code>classes</code> property.
+This <code>classes</code> object contains the name of the class names injected in the DOM.</p>
+<p>Some implementation details that might be interesting to being aware of:</p>
+<ul>
+<li>It adds a <code>classes</code> property so you can override the injected class names from the outside.</li>
+<li>It adds an <code>innerRef</code> property so you can get a reference to the wrapped component.</li>
+<li>It forwards <em>non React static</em> properties so this HOC is more "transparent".
+For instance, it can be used to defined a <code>getInitialProps()</code> static method (next.js).</li>
+</ul>
+<h4 id="arguments"><a href="#arguments" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arguments</h4>
+<ol>
+<li><code>styles</code> (<em>Function | Object</em>): A function generating the styles or an object.
+It will be linked to the component.
+Use the function signature if you need to have access to the theme. It's provided as the first argument.</li>
+<li><code>options</code> (<em>Object</em> [optional]):</li>
+<li><code>options.withTheme</code> (Boolean [optional]): Provide the <code>theme</code> object to the component as a property. It's <code>false</code> by default.</li>
+<li><code>options.name</code> (<em>String</em> [optional]): The name of the style sheet. Useful for debugging.
+If the value isn't provided, we will try to fallback to the name of the component.</li>
+<li><code>options.flip</code> (<em>Boolean</em> [optional]): When set to false, this sheet will opt-out of <code>rtl</code> transformation.</li>
+<li>The other keys are forwarded to the options argument of <a href="http://cssinjs.org/js-api/#create-style-sheet">jss.createStyleSheet()</a>.</li>
+</ol>
+<h4 id="returns"><a href="#returns" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returns</h4>
+<p><code>Higher-order Component</code>: Should be used to wrap a component.</p>
+<h4 id="examples"><a href="#examples" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> withStyles <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'material-ui/styles'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> styles <span class="token operator">=</span> <span class="token punctuation">{</span>
+  root<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    background<span class="token punctuation">:</span> <span class="token string">'red'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>classes<span class="token punctuation">.</span>root<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withStyles</span><span class="token punctuation">(</span>styles<span class="token punctuation">)</span><span class="token punctuation">(</span>MyComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<p>Also, you can use as <a href="https://babeljs.io/docs/plugins/transform-decorators/">decorators</a> like so:</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> withStyles <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'material-ui/styles'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> styles <span class="token operator">=</span> <span class="token punctuation">{</span>
+  root<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    background<span class="token punctuation">:</span> <span class="token string">'red'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+@<span class="token function">withStyles</span><span class="token punctuation">(</span>styles<span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>classes<span class="token punctuation">.</span>root<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent
+</code></pre>
+      </div></div><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0;" data-reactid="11"><li data-reactid="12"><a rel="prev" href="/2018-03-03/new-start/" data-reactid="13"><!-- react-text: 14 -->← <!-- /react-text --><!-- react-text: 15 -->全新的开始<!-- /react-text --></a></li></ul></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-10655e88f25da7ba67f9.js","107818501498521":"component---src-templates-blog-post-js-299dd36a9663a387e47a.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","263791100135453":"component---src-pages-about-js-ed52ec0f1687acf60ebc.js","35783957827783":"component---src-pages-index-js-5106969d8b4be487b38f.js","60335399758886":"path----131f9aef94525eeb6ecd.js","256234599447246":"path---2018-03-11-ten-principles-of-economics-778452ab2ffa66f86ea0.js","120489901804216":"path---2018-03-09-new-start-6e2d76ed008a27d88eb0.js","195322417785556":"path---2018-03-04-new-start-3f37915b0c5ae9109027.js","246730331572575":"path---2018-03-03-new-start-23b0a3dcff321181a7b0.js","51499164283677":"path---2018-03-02-new-start-5845dbfb1c56c9bb89d9.js","57475817954589":"path---2018-03-05-new-start-66702a44827dbe69b0a2.js","151259704863498":"path---2018-03-06-new-start-524e12f8346021960ae5.js","2427335857058":"path---2018-03-07-new-start-9a6369c919f6476a3b4f.js","44844817996527":"path---2018-03-08-new-start-2674adc5c7a12814213b.js","249976075951393":"path---2018-03-10-new-start-be156db0f3ebf2f519db.js","237853762202661":"path---world-4170921a6dfa7fbd8bfb.js","89590690371676":"path---hello-7656f9c0291b3e0f0197.js","150799074123499":"path---javascript-e1b83e2d5a2a39a95004.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","273950069227526":"path---about-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-9d6a28ab0aee38036daa.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","38763966192521":"component---src-layouts-blog-post-js-9ed38c9334d9b4fbdfe5.js","114276838955818":"component---src-layouts-index-js-35fbd7d6fdf385a88d2e.js"}/*]]>*/</script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/commons-084505cd4fd6b32f6bf7.js","/app-10655e88f25da7ba67f9.js","/path---2018-03-04-new-start-3f37915b0c5ae9109027.js","/component---src-templates-blog-post-js-299dd36a9663a387e47a.js","/component---src-layouts-blog-post-js-9ed38c9334d9b4fbdfe5.js"])/*]]>*/</script></body></html>

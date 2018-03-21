@@ -5,14 +5,21 @@
  */
 
  // You can delete this file if you're not using it
+ import React from 'react'
 import Helmet from "react-helmet"
 import { renderToString } from "react-dom/server"
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
 
-exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
+exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
+  const sheet = new ServerStyleSheet();
+  const App = () => (
+    <StyleSheetManager sheet={sheet.instance}>
+      {bodyComponent}
+    </StyleSheetManager>
+  )
 
-  const bodyHTML = renderToString(bodyComponent)
-
-  replaceBodyHTMLString(bodyHTML)
+  replaceBodyHTMLString(renderToString(<App />));
+  setHeadComponents([sheet.getStyleElement()])
 }
 
 exports.onRenderBody = (

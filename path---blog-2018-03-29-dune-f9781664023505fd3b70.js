@@ -1,0 +1,2 @@
+webpackJsonp([77931077993147],{371:function(e,t){e.exports={data:{markdownRemark:{id:"C:/Users/IronMan/Desktop/projects/blog/src/pages/blog/2018-03-29-dune.md absPath of file >>> MarkdownRemark",html:"<p>沙丘，一般般。</p>",frontmatter:{title:"《沙丘》--",date:"03月 29日, 2018年"}}},pathContext:{slug:"/blog/2018-03-29-dune/",previous:!1,next:!1}}}});
+//# sourceMappingURL=path---blog-2018-03-29-dune-f9781664023505fd3b70.js.map

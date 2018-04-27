@@ -64,7 +64,6 @@ const Marked = styled.div`
 
 export default class BlogPostTemplate extends Component {
   render() {
-    console.log(this.props);
     const post = this.props.data.markdownRemark;
     const { previous, next } = this.props.pathContext;
     return (

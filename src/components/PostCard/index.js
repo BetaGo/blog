@@ -19,6 +19,7 @@ const Content = styled.div`
     position: relative;
     padding: 10px 0;
     width: 60%;
+    color: rgba(255,255,255,.6);
 
     & h4 {
         line-height: 60px;

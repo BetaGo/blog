@@ -10,6 +10,10 @@ const Marked = styled.div`
   padding: 10px 20px;
   border-radius: 5px;
   background-color: rgba(0,0,0,0.3);
+
+  & img {
+    max-width: 100%;
+  }
   
   & pre {
     background: rgba(27,28,22,0.3)
@@ -73,25 +77,36 @@ export default class BlogPostTemplate extends Component {
         <Marked dangerouslySetInnerHTML={{__html: post.html}} />
         <ul
           style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
             listStyle: 'none',
             padding: 0,
           }}
         >
           {previous && (
-            <li>
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+            <li style={{ float: 'left'}}>
+              <Link
+                to={previous.fields.slug}
+                rel="prev"
+                style={{
+                  color: 'white',
+                  textDecoration: 'none',
+                }}
+              >
+                <i className="fas fa-arrow-left" /> {previous.frontmatter.title}
               </Link>
             </li>
           )}
 
           {next && (
-            <li>
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+            <li style={{float: 'right'}}>
+              <Link
+                to={next.fields.slug}
+                rel="next"
+                style={{
+                  color: 'white',
+                  textDecoration: 'none',
+                }}
+              >
+                {next.frontmatter.title} <i className="fas fa-arrow-right" />
               </Link>
             </li>
           )}

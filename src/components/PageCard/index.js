@@ -71,9 +71,13 @@ class PageCard extends Component {
     render() {
         return (
             <Container>
-                <Prev onClick={this.handlePrevPage}>&lt;</Prev>
+                <Prev onClick={this.handlePrevPage}>
+                    <i className="fas fa-angle-left" />
+                </Prev>
                 {this.renderCards()}
-                <Next onClick={this.handleNextPage}>&gt;</Next>
+                <Next onClick={this.handleNextPage}>
+                    <i className="fas fa-angle-right" />
+                </Next>
             </Container>
         );
     }

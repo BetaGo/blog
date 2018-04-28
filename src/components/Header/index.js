@@ -11,6 +11,11 @@ const Content = styled.div`
   margin: 0 auto;
   max-width: 960px;
   padding: 30px 20px;
+
+  & h1 {
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 const Header = () => (
@@ -26,8 +31,17 @@ const Header = () => (
         >
           Beta Go
         </Link>
+        <a
+          href="https://github.com/BetaGo"
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+          }}
+        >
+          <i className="fab fa-github"></i>
+        </a>
       </h1>
-    </Content>
+      </Content>
   </Root>
 )
 

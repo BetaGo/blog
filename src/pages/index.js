@@ -7,7 +7,7 @@ import SolarSystem from '../components/SolarSystem';
 import PageCard from '../components/PageCard';
 
 const Quote = styled.div`
-  width: 800px;
+  max-width: 800px;
   margin: 30px auto;
   font-size: 22px;
   line-height: 40px;

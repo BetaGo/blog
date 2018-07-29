@@ -1,54 +1,59 @@
-import React from 'react';
-import styled from 'styled-components';
-import Link from 'gatsby-link';
+import React from "react";
+import styled from "styled-components";
+import Link from "gatsby-link";
 
-import PostCard from '../components/PostCard';
-import SolarSystem from '../components/SolarSystem';
-import PageCard from '../components/PageCard';
+import PostCard from "../components/PostCard";
+import SolarSystem from "../components/SolarSystem";
+import PageCard from "../components/PageCard";
 
 const Quote = styled.div`
   max-width: 800px;
   margin: 30px auto;
   font-size: 22px;
-  line-height: 40px;
+  line-height: 1.8;
   text-align: center;
   color: #aaa;
   & div {
     font-weight: bold;
   }
-`
+  @media (max-width: 520px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+`;
 
 const NavLink = props => {
   if (!props.test) {
-    return <Link to={props.url} >{props.text}</Link>
+    return <Link to={props.url}>{props.text}</Link>;
   } else {
-    return <span>{props.text}</span>
+    return <span>{props.text}</span>;
   }
-}
+};
 
-const IndexPage = ( props ) => {
+const IndexPage = props => {
   let { data, pathContext } = props;
-  const allPosts = data.allMarkdownRemark.edges
-    .filter(edge => !!edge.node.frontmatter.date)
+  const allPosts = data.allMarkdownRemark.edges.filter(
+    edge => !!edge.node.frontmatter.date
+  );
 
   return (
     <div>
       <Quote>
-        “You smiled and talked to me of nothing and I felt that for this I had been waiting long.”
+        “You smiled and talked to me of nothing and I felt that for this I had
+        been waiting long.”
         <div>― Rabindranath Tagore</div>
       </Quote>
       <SolarSystem />
       <PageCard posts={allPosts} />
     </div>
-  )
-}
+  );
+};
 
-export default IndexPage
-
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
@@ -65,4 +70,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

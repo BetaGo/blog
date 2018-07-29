@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Root = styled.div`
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 `
 
@@ -38,10 +38,10 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          <i className="fab fa-github"></i>
+          <i className="fab fa-github" />
         </a>
       </h1>
-      </Content>
+    </Content>
   </Root>
 )
 

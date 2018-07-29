@@ -1,14 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'BLOG',
+    title: "BLOG",
+    author: "gouwantong@live.com",
+    description: "life long learning",
+    siteUrl: "https://blog.gouwantong.com"
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        name: "pages"
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -24,16 +27,15 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: "language-",
-            },
+              classPrefix: "language-"
+            }
           },
           `gatsby-remark-autolink-headers`,
-          "gatsby-remark-copy-linked-files",
-        ],
-      },
+          "gatsby-remark-copy-linked-files"
+        ]
+      }
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-remove-serviceworker',
-  ],
+    `gatsby-plugin-react-helmet`
+  ]
 };

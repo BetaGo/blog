@@ -1,11 +1,10 @@
-import React from "react";
-import Helmet from "react-helmet";
-import styled, { injectGlobal } from "styled-components";
-import Link from "gatsby-link";
+import React from 'react'
+import Helmet from 'react-helmet'
+import styled, { injectGlobal } from 'styled-components'
 
-import Header from "../components/Header";
+import Header from '../components/Header'
 
-require("prismjs/themes/prism-okaidia.css");
+require('prismjs/themes/prism-okaidia.css')
 
 injectGlobal`
     html, body {
@@ -19,7 +18,7 @@ injectGlobal`
         background-attachment:fixed;
         margin: 0;
     }
-`;
+`
 
 // const Header = styled.div`
 //   color: #ddd;
@@ -38,21 +37,21 @@ injectGlobal`
 //   }
 // `;
 
-const Content = styled.div``;
+const Content = styled.div``
 
 const Container = styled.div`
   max-width: 960px;
   margin: auto;
   padding: 1em;
-`;
+`
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
       title="Beta Go"
       meta={[
-        { name: "description", content: "blog" },
-        { name: "keywords", content: "blog, front end, read" }
+        { name: 'description', content: 'blog' },
+        { name: 'keywords', content: 'blog, front end, read' },
       ]}
     >
       <link
@@ -67,9 +66,9 @@ const TemplateWrapper = ({ children }) => (
     </Header> */}
     <Header />
     <Content>
-      <Container>{children()}</Container>
+      <Container>{children}</Container>
     </Content>
   </div>
-);
+)
 
-export default TemplateWrapper;
+export default TemplateWrapper

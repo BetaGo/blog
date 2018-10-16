@@ -1,6 +1,9 @@
-import React, { Component } from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
+import React, { Component } from 'react'
+import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
+
+import BlogLayout from '../layouts/BlogPost'
 
 const Marked = styled.div`
   font-size: 16;
@@ -70,15 +73,15 @@ const Marked = styled.div`
       text-decoration: underline;
     }
   }
-`;
+`
 
 const Title = styled.h1`
   text-align: center;
-`;
+`
 
 const PublishDate = styled.div`
   text-align: right;
-`;
+`
 
 const Cursor = styled.div`
   font-size: 14px;
@@ -90,12 +93,12 @@ const Cursor = styled.div`
     color: #fff;
     text-decoration: none;
   }
-`;
+`
 
 const CursorContainer = styled.div`
   display: flex;
   justify-content: space-between;
-`;
+`
 
 const CursorText = styled.span`
   display: inline-block;
@@ -104,14 +107,14 @@ const CursorText = styled.span`
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 0.6em;
-`;
+`
 
 export default class BlogPostTemplate extends Component {
   render() {
-    const post = this.props.data.markdownRemark;
-    const { previous, next } = this.props.pathContext;
+    const post = this.props.data.markdownRemark
+    const { previous, next } = this.props.pageContext
     return (
-      <div>
+      <BlogLayout>
         <Title>{post.frontmatter.title}</Title>
         <PublishDate>{post.frontmatter.date}</PublishDate>
         <Marked dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -130,7 +133,7 @@ export default class BlogPostTemplate extends Component {
                 to={next.fields.slug}
                 rel="next"
                 style={{
-                  textAlign: "right"
+                  textAlign: 'right',
                 }}
               >
                 <CursorText>{next.frontmatter.title}</CursorText>
@@ -175,8 +178,8 @@ export default class BlogPostTemplate extends Component {
             </li>
           )}
         </ul> */}
-      </div>
-    );
+      </BlogLayout>
+    )
   }
 }
 
@@ -191,4 +194,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

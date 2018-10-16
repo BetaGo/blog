@@ -1,10 +1,7 @@
 import React from 'react'
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+  <div>沙漠之所以美丽，是因为在某个地方藏着一口井。</div>
 )
 
 export default NotFoundPage

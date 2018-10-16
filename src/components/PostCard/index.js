@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 const Root = styled.div`
   position: relative;
@@ -9,12 +9,12 @@ const Root = styled.div`
   width: 320px;
   height: 160px;
   background: ${props =>
-    props.hasCover ? "rgba(0,0,0,0.3)" : "rgba(0,0,0,0.1)"};
+    props.hasCover ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.1)'};
   background-clip: padding-box;
   text-align: left;
   border: 2px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
-`;
+`
 
 const Content = styled.div`
   position: relative;
@@ -33,7 +33,7 @@ const Content = styled.div`
     height: 80px;
     margin: 0;
   }
-`;
+`
 
 const Excerpt = styled.div`
   position: absolute;
@@ -80,14 +80,14 @@ const Excerpt = styled.div`
       font-size: 13px;
     }
   }
-`;
+`
 const Cover = styled.div`
   width: 40%;
   background: no-repeat center/cover url(${props => props.src});
-`;
+`
 
 const PostLink = ({ post }) => (
-  <Link to={post.fields.slug} style={{ textDecoration: "none" }}>
+  <Link to={post.fields.slug} style={{ textDecoration: 'none' }}>
     <Root hasCover={post.frontmatter.cover}>
       <Content>
         <h4>{post.frontmatter.date}</h4>
@@ -105,6 +105,6 @@ const PostLink = ({ post }) => (
       </Excerpt>
     </Root>
   </Link>
-);
+)
 
-export default PostLink;
+export default PostLink

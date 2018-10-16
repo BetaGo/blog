@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "用React构建一个小商城（二）"
-date: 2017-08-10
+date: 2017-08-11
 excerpt: "用 React 组件构建小商城的UI。"
 tags: [web, 学习, 前端, React]
 cover: "https://github.com/GoWantong/GoWantong.github.io/raw/master/assets/img/google-play-carousel.png"

@@ -1,10 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "gatsby-link";
+import React from 'react'
+import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
-import PostCard from "../components/PostCard";
-import SolarSystem from "../components/SolarSystem";
-import PageCard from "../components/PageCard";
+import IndexLayout from '../layouts/index'
+
+import SolarSystem from '../components/SolarSystem'
+import PageCard from '../components/PageCard'
 
 const Quote = styled.div`
   max-width: 800px;
@@ -20,24 +21,15 @@ const Quote = styled.div`
     font-size: 16px;
     line-height: 1.5;
   }
-`;
+`
 
-const NavLink = props => {
-  if (!props.test) {
-    return <Link to={props.url}>{props.text}</Link>;
-  } else {
-    return <span>{props.text}</span>;
-  }
-};
-
-const IndexPage = props => {
-  let { data, pathContext } = props;
+const IndexPage = ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges.filter(
     edge => !!edge.node.frontmatter.date
-  );
+  )
 
   return (
-    <div>
+    <IndexLayout>
       <Quote>
         “You smiled and talked to me of nothing and I felt that for this I had
         been waiting long.”
@@ -45,11 +37,11 @@ const IndexPage = props => {
       </Quote>
       <SolarSystem />
       <PageCard posts={allPosts} />
-    </div>
-  );
-};
+    </IndexLayout>
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -70,4 +62,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

@@ -6,78 +6,71 @@
 
 // You can delete this file if you're not using it
 
-const _ = require("lodash");
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require(`path`)
+const _ = require(`lodash`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
 
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  const blogTemplate = path.resolve('./src/templates/BlogPost.js')
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve("./src/templates/BlogPost.js");
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  id
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                    tags
-                    date
-                    cover
-                  }
-                }
+    graphql(`
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                tags
+                date
+                cover
               }
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          reject(result.errors);
         }
+      }
+    `).then(result => {
+      if (result.errors) {
+        reject(result.errors)
+      }
+      // Create blog posts pages.
+      const posts = result.data.allMarkdownRemark.edges
 
-        // console.log(result);
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges;
-        _.each(posts, (post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
+      _.each(posts, (post, index) => {
+        const previous =
+          index === posts.length - 1 ? null : posts[index + 1].node
+        const next = index === 0 ? null : posts[index - 1].node
 
-          createPage({
-            path: post.node.fields.slug,
-            component: blogPost,
-            layout: "BlogPost",
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next
-            }
-          });
-        });
+        createPage({
+          path: post.node.fields.slug,
+          component: blogTemplate,
+          context: {
+            slug: post.node.fields.slug,
+            previous,
+            next,
+          },
+        })
       })
-    );
-  });
-};
-
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
-    createNodeField({
-      name: `slug`,
-      node,
-      value
-    });
-  }
-};
+      resolve()
+    })
+  })
+}

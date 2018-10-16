@@ -1,8 +1,8 @@
-import React from "react";
-import Helmet from "react-helmet";
-import styled, { injectGlobal } from "styled-components";
+import React from 'react'
+import Helmet from 'react-helmet'
+import { injectGlobal } from 'styled-components'
 
-import Header from "../components/Header";
+import Header from '../components/Header'
 
 injectGlobal`
  html, body {
@@ -16,14 +16,14 @@ injectGlobal`
      background-attachment:fixed;
      margin: 0;
  }
-`;
+`
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
       title="Beta Go"
       meta={[
-        { name: "description", content: "blog" },
-        { name: "keywords", content: "blog, front end, read" }
+        { name: 'description', content: 'blog' },
+        { name: 'keywords', content: 'blog, front end, read' },
       ]}
     >
       <link
@@ -34,8 +34,8 @@ const TemplateWrapper = ({ children }) => (
       />
     </Helmet>
     <Header />
-    {children()}
+    {children}
   </div>
-);
+)
 
-export default TemplateWrapper;
+export default TemplateWrapper

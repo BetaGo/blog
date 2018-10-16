@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{138:function(n,e,t){"use strict";t.r(e);var u=t(0),a=t.n(u);e.default=function(){return a.a.createElement("div",null,"沙漠之所以美丽，是因为在某个地方藏着一口井。")}}}]);
+//# sourceMappingURL=component---src-pages-404-js-7e3502bcb15a6f8a5452.js.map
